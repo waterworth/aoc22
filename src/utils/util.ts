@@ -3,6 +3,8 @@ type NumOrBigInt = number | bigint;
 /* Helper to run mutliple search-and-replace 
 */
 
+
+
 export function replaceAll(body: string, replacements: { [search: string]: string }, global = true) {
   let current = body;
   for (const entry of Object.entries(replacements)) {
@@ -190,4 +192,14 @@ export function min<T>(array: T[], toNum: (element: T) => number = Number) {
     }
   }
   return { index: minIndex, value: minValue, element: minElement }
+}
+
+
+export function formatToArray(input: string){
+  const lines = input.split("\n");
+  // Remove trailing empty line
+  if (lines[lines.length - 1] === "") {
+    lines.pop();
+  }
+  return lines;
 }
