@@ -1,8 +1,6 @@
 import * as fs from 'fs';
 import { formatToArray } from '../utils/util';
 
-
-
 function containsOtherArray(a: number[], b: number[]){
       const [a1, a2] = a
       const [b1, b2] = b
@@ -28,7 +26,6 @@ function part1() {
   console.log(arr.filter(([a, b]) =>
     overlaps(a, b) || overlaps(b,a)
   ).length)
-
 }
 
 part1()

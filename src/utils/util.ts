@@ -3,8 +3,6 @@ type NumOrBigInt = number | bigint;
 /* Helper to run mutliple search-and-replace 
 */
 
-
-
 export function replaceAll(body: string, replacements: { [search: string]: string }, global = true) {
   let current = body;
   for (const entry of Object.entries(replacements)) {
